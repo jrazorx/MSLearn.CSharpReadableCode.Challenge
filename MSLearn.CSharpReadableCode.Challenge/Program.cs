@@ -1,13 +1,22 @@
-﻿string str = "The quick brown fox jumps over the lazy dog.";
-// convert the message into a char array
+﻿/*
+The high-level purpose of this code is to : 
+1. reverse a string
+2. count the number of times the character 'o' appears
+*/
+
+string str = "The quick brown fox jumps over the lazy dog.";
+
+// String reverse part
 char[] charMessage = str.ToCharArray();
-// Reverse the chars
 Array.Reverse(charMessage);
-int x = 0;
-// count the o's
-foreach (char i in charMessage) { if (i == 'o') { x++; } }
-// convert it back to a string
 string new_message = new String(charMessage);
-// print it out
 Console.WriteLine(new_message);
+
+// Characters count part
+int x = 0;
+foreach (char i in charMessage) {
+    if (i == 'o') {
+        x++;
+    }
+}
 Console.WriteLine($"'o' appears {x} times.");
